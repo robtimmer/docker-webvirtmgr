@@ -5,7 +5,10 @@ FROM ubuntu:16.04
 MAINTAINER Rob Timmer <rob@robtimmer.com>
 
 # Set environment variables
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND noninteractive \
+    USER admin \
+    EMAIL admin@localhost \
+    PASSWORD 123456abcd
 
 # Install dependencies
 RUN apt-get -y update && \

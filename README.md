@@ -3,8 +3,20 @@
 ### Usage
 
 ```
-$ docker run -d -p 8080:8080 -p 6080:6080 -v /data/vm:/data/vm robtimmer/webvirtmgr
+$ docker run -d \
+  -p 8080:8080 -p 6080:6080 \
+  -e USER=admin -e EMAIL=admin@localhost -e PASSWORD=123456abcd \
+  -v /data:/data
+  robtimmer/webvirtmgr
 ```
+
+### Environment variables
+
+_USER: the username (used to login)_
+
+_EMAIL: the email address_
+
+_PASSWORD: the password (used to login)_
 
 ### libvirtd configuration on the host
 
