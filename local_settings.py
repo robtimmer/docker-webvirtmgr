@@ -7,4 +7,4 @@ DATABASES = {
     }
 }
 
-
+TIME_ZONE = 'Europe/Amsterdam'
